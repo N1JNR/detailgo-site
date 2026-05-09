@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 180 180" data-om-id="28d5fbeb:32" xmlns="http://www.w3.org/2000/svg">
+          <defs data-om-id="28d5fbeb:33">
+            <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1" data-om-id="28d5fbeb:34">
+              <stop offset="0%" stop-color="#1a2826" data-om-id="28d5fbeb:35"/>
+              <stop offset="100%" stop-color="#050606" data-om-id="28d5fbeb:36"/>
+            </linearGradient>
+            <radialGradient id="glA" cx="0.78" cy="0.18" r="0.6" data-om-id="28d5fbeb:37">
+              <stop offset="0%" stop-color="#D4FF3D" stop-opacity="0.45" data-om-id="28d5fbeb:38"/>
+              <stop offset="100%" stop-color="#D4FF3D" stop-opacity="0" data-om-id="28d5fbeb:39"/>
+            </radialGradient>
+          </defs>
+          <rect width="180" height="180" rx="40" fill="url(#bgA)" data-om-id="28d5fbeb:40"/>
+          <rect width="180" height="180" rx="40" fill="url(#glA)" data-om-id="28d5fbeb:41"/>
+          <g transform="translate(36,28)" data-om-id="28d5fbeb:42">
+            <path d="M54 4 C 72 30, 96 50, 96 74 a 42 42 0 1 1 -84 0 C 12 50, 36 30, 54 4 Z" fill="rgba(212,255,61,0.06)" stroke="#D4FF3D" stroke-width="2.4" data-om-id="28d5fbeb:43"/>
+            <path d="M40 50 C 32 60, 28 74, 32 88" stroke="#D4FF3D" stroke-width="3" stroke-linecap="round" fill="none" data-om-id="28d5fbeb:44"/>
+            <g stroke="#D4FF3D" stroke-linecap="round" data-om-id="28d5fbeb:45">
+              <line x1="14" y1="78" x2="40" y2="78" stroke-width="3" data-om-id="28d5fbeb:46"/>
+              <line x1="6" y1="90" x2="32" y2="90" stroke-width="2.4" opacity="0.75" data-om-id="28d5fbeb:47"/>
+              <line x1="18" y1="102" x2="36" y2="102" stroke-width="2" opacity="0.5" data-om-id="28d5fbeb:48"/>
+            </g>
+          </g>
+        </svg>
