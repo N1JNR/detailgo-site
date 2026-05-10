@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 78% 12%, rgba(200, 255, 36, 0.18), transparent 28rem),
     radial-gradient(circle at 0% 45%, rgba(255, 96, 72, 0.1), transparent 22rem),
@@ -112,6 +113,7 @@ img {
   padding: 0 22px;
   border-radius: 999px;
   font-weight: 900;
+  text-align: center;
 }
 
 .nav-cta,
@@ -455,7 +457,7 @@ h3 {
 }
 
 .pricing li::before {
-  content: "✓";
+  content: "\2713";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -534,11 +536,32 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 78% 8%, rgba(200, 255, 36, 0.16), transparent 19rem),
+      radial-gradient(circle at 0% 30%, rgba(255, 96, 72, 0.08), transparent 16rem),
+      var(--ink);
+  }
+
+  body::before {
+    background-size: 46px 46px;
+  }
+
   .topbar,
   .hero,
   .section,
   .footer {
     width: min(100% - 28px, 1180px);
+  }
+
+  .topbar {
+    padding: 14px 0;
+  }
+
+  .brand img,
+  .footer img {
+    width: 34px;
+    height: 34px;
   }
 
   .brand span {
@@ -552,11 +575,29 @@ h3 {
   }
 
   .hero {
-    padding-top: 26px;
+    gap: 30px;
+    padding: 24px 0 48px;
   }
 
   h1 {
-    font-size: clamp(44px, 16vw, 76px);
+    margin-bottom: 18px;
+    font-size: clamp(40px, 14vw, 64px);
+    line-height: 0.92;
+  }
+
+  h2 {
+    font-size: clamp(31px, 10vw, 46px);
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 1.35;
   }
 
   .lead,
@@ -565,6 +606,20 @@ h3 {
   .pricing-card p,
   .cards p {
     font-size: 17px;
+    line-height: 1.48;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 26px 0;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 20px;
   }
 
   .metrics,
@@ -575,29 +630,196 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .metrics {
+    gap: 10px;
+  }
+
+  .metrics div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 70px;
+    padding: 16px 18px;
+  }
+
+  .metrics strong {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .metrics span {
+    text-align: right;
+  }
+
   .phone-stage {
-    min-height: 500px;
+    display: grid;
+    place-items: center;
+    min-height: 0;
+    padding: 4px 0 18px;
+  }
+
+  .phone {
+    position: relative;
+    border-radius: 32px;
   }
 
   .phone-main {
-    width: 78vw;
+    right: auto;
+    top: auto;
+    z-index: 2;
+    width: min(82vw, 310px);
   }
 
   .phone-back {
-    width: 58vw;
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: min(48vw, 190px);
+    opacity: 0.55;
+    transform: rotate(-8deg) translateY(10px);
+  }
+
+  .strip {
+    gap: 10px;
+    padding: 8px 0 44px;
+  }
+
+  .strip-item {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .strip-item strong {
+    margin-top: 8px;
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 54px 0;
+  }
+
+  .split,
+  .admin-panel,
+  .pricing {
+    gap: 28px;
+  }
+
+  .screen-grid,
+  .admin-screens,
+  .cards,
+  .feature-list {
+    gap: 12px;
+  }
+
+  .screen-card,
+  .screen-card.tall,
+  .admin-screens img,
+  .price-phone {
+    border-radius: 24px;
   }
 
   .screen-card,
   .screen-card.tall {
-    max-height: 520px;
+    max-height: 560px;
+  }
+
+  .cards article {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 18px;
+    border-radius: 16px;
   }
 
   .pricing-card {
-    padding: 28px;
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .pricing h2 {
+    margin-bottom: 8px;
+    font-size: clamp(64px, 24vw, 96px);
+  }
+
+  .pricing h2 span {
+    display: inline-block;
+    font-size: 21px;
+  }
+
+  .pricing ul {
+    gap: 12px;
+    margin: 26px 0;
+  }
+
+  .pricing li {
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .pricing li::before {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .price-phone {
+    max-height: 560px;
   }
 
   .footer {
     align-items: flex-start;
     flex-direction: column;
+    gap: 12px;
+    padding: 28px 0 36px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .topbar,
+  .hero,
+  .section,
+  .footer {
+    width: min(100% - 22px, 1180px);
+  }
+
+  .nav-cta {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 13.4vw, 54px);
+  }
+
+  .phone-main {
+    width: min(88vw, 292px);
+  }
+
+  .phone-back {
+    display: none;
+  }
+
+  .metrics div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .metrics span {
+    text-align: left;
+  }
+
+  .screen-card,
+  .screen-card.tall {
+    max-height: 500px;
   }
 }
