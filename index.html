@@ -35,13 +35,7 @@
         <div class="hero-copy">
           <p class="eyebrow rotating-eyebrow">
             <span class="dot"></span>
-            <span class="rotator" aria-label="estética automotiva, serviços, agendamentos, gestão e clientes">
-              <span>estética automotiva</span>
-              <span>serviços</span>
-              <span>agendamentos</span>
-              <span>gestão</span>
-              <span>clientes</span>
-            </span>
+            <span class="rotator" aria-live="polite">serviços</span>
           </p>
           <h1>Agende serviços e gerencie sua estética automotiva em um só app.</h1>
           <p class="lead">
@@ -195,5 +189,22 @@
       </div>
       <a href="mailto:jorge@detailgo.com">jorge@detailgo.com</a>
     </footer>
+    <script>
+      const rotator = document.querySelector(".rotator");
+      const terms = ["serviços", "agendamentos", "gestão", "clientes", "estética automotiva"];
+      let termIndex = 0;
+
+      if (rotator) {
+        window.setInterval(() => {
+          termIndex = (termIndex + 1) % terms.length;
+          rotator.classList.add("is-switching");
+
+          window.setTimeout(() => {
+            rotator.textContent = terms[termIndex];
+            rotator.classList.remove("is-switching");
+          }, 180);
+        }, 1800);
+      }
+    </script>
   </body>
 </html>
