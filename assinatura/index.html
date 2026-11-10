@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Retorno do pagamento da assinatura DetailGo. Volte ao aplicativo para continuar."
+    />
+    <title>Pagamento — DetailGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <!--
+      Para onde o navegador volta depois do checkout do Asaas.
+
+      Serve os três retornos — sucesso, cancelamento e expiração — porque esta
+      página NÃO é prova de pagamento: quem confirma é o webhook do Asaas, no
+      servidor. Prometer "pagamento aprovado" aqui mentiria para quem cancelou
+      e para quem fechou a página no meio.
+
+      Antes disso existir, o checkout voltava para uma URL que não existia e
+      todo mundo que pagava caía num 404.
+    -->
+    <main class="aviso">
+      <img class="marca" src="../assets/logo-01-speed-drop.svg" alt="DetailGo" />
+      <h1>Pode voltar ao aplicativo</h1>
+      <p>
+        Se o pagamento foi concluído, a liberação é automática e acontece em poucos instantes —
+        abra o DetailGo e o painel já estará disponível.
+      </p>
+      <p>
+        Se você cancelou ou fechou no meio, nada foi cobrado. É só tentar de novo pelo app quando
+        quiser.
+      </p>
+      <p>
+        Algum problema? Escreva para <a href="mailto:jorge@detailgo.com">jorge@detailgo.com</a>.
+      </p>
+    </main>
+  </body>
+</html>
